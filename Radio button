@@ -1,0 +1,26 @@
+package Actions;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Radiobutton {
+	public static void main(String[] args) {
+		WebDriver driver=new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://www.dummies.com/web-design-development/site-development/how-to-create-a-radio-button-in-an-html5-form");
+		
+		
+		
+		WebElement radio1 = driver.findElement(By.id("sizeSmall"));
+		WebElement radio2 = driver.findElement(By.id("sizeMed"));
+		WebElement radio3 = driver.findElement(By.id("sizeLarge"));
+
+		radio3.click();
+		System.out.println(radio1.isSelected());
+		System.out.println(radio2.isSelected());
+		System.out.println(radio3.isSelected());
+		
+	}
+}
